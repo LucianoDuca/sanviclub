@@ -525,6 +525,14 @@
   border-bottom-color: var(--cs-red);
 }
 
+.club-subnav-bar {
+  display: none;
+}
+
+.club-hamburger {
+  display: none;
+}
+
 /* =============================================
    GALERÍA — masonry con filtros
 ============================================= */
@@ -869,35 +877,99 @@
   }
 
   .club-subnav-inner {
-    padding: 0 10px;
-    gap: 6px;
-    overflow-x: auto;
-    -webkit-overflow-scrolling: touch;
-    scrollbar-width: none;
+    flex-direction: column;
+    padding: 0;
+    gap: 0;
+    align-items: stretch;
     justify-content: flex-start;
+    overflow: visible;
   }
 
-  .club-subnav-inner::-webkit-scrollbar {
-    display: none;
+  .club-subnav-bar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 16px;
+    height: 43px;
+    flex-shrink: 0;
+  }
+
+  .club-subnav-brand {
+    color: rgba(255, 255, 255, 0.90);
+    font-size: 0.70rem;
+    font-weight: 900;
+    letter-spacing: 2.5px;
+    text-transform: uppercase;
+  }
+
+  .club-hamburger {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 5px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 8px;
+    margin-right: -8px;
+  }
+
+  .club-hamburger span {
+    display: block;
+    width: 22px;
+    height: 2px;
+    background: var(--cs-white);
+    border-radius: 2px;
+    transition: transform 0.25s ease, opacity 0.25s ease;
+  }
+
+  .club-hamburger[aria-expanded="true"] span:nth-child(1) {
+    transform: translateY(7px) rotate(45deg);
+  }
+
+  .club-hamburger[aria-expanded="true"] span:nth-child(2) {
+    opacity: 0;
+    transform: scaleX(0);
+  }
+
+  .club-hamburger[aria-expanded="true"] span:nth-child(3) {
+    transform: translateY(-7px) rotate(-45deg);
   }
 
   .club-subnav-list {
-    flex-shrink: 0;
+    max-height: 0;
+    overflow: hidden;
+    flex-direction: column;
+    align-items: stretch;
+    transition: max-height 0.3s ease;
+  }
+
+  .club-subnav-inner.open .club-subnav-list {
+    max-height: 300px;
   }
 
   .club-subnav-link {
-    padding: 12px 10px;
-    font-size: 0.62rem;
-    letter-spacing: 1px;
-    white-space: nowrap;
+    padding: 13px 20px;
+    font-size: 0.68rem;
+    letter-spacing: 1.5px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.07);
+    white-space: normal;
+  }
+
+  .club-subnav-link:hover,
+  .club-subnav-link.active {
+    border-bottom-color: rgba(255, 255, 255, 0.07);
+    background: rgba(255, 255, 255, 0.07);
   }
 
   .club-subnav-btn {
-    padding: 7px 12px;
-    font-size: 0.60rem;
-    letter-spacing: 1px;
-    white-space: nowrap;
-    flex-shrink: 0;
+    display: none;
+    margin: 10px 16px 14px;
+    text-align: center;
+  }
+
+  .club-subnav-inner.open .club-subnav-btn {
+    display: block;
   }
 
   .club-hero-content {

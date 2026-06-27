@@ -253,3 +253,31 @@ var openLightbox = null;
       .catch(function () {});
   }
 })();
+
+/* =============================================
+   HAMBURGER MENU — subnav mobile
+============================================= */
+(function () {
+  var hamburger = document.getElementById('clubHamburger');
+  var inner     = document.getElementById('clubSubnavInner');
+  if (!hamburger || !inner) return;
+
+  function close() {
+    inner.classList.remove('open');
+    hamburger.setAttribute('aria-expanded', 'false');
+  }
+
+  hamburger.addEventListener('click', function (e) {
+    e.stopPropagation();
+    var open = inner.classList.toggle('open');
+    hamburger.setAttribute('aria-expanded', String(open));
+  });
+
+  inner.querySelectorAll('.club-subnav-link').forEach(function (link) {
+    link.addEventListener('click', close);
+  });
+
+  document.addEventListener('click', function (e) {
+    if (!inner.contains(e.target)) close();
+  });
+})();
