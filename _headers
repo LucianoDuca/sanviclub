@@ -1,29 +1,47 @@
-/*.css
+/css/*.css
   Content-Type: text/css; charset=utf-8
 
-/*.js
+/js/*.js
   Content-Type: application/javascript; charset=utf-8
 
-/*.webp
+/assets/img/*.webp
   Content-Type: image/webp
 
-/*.png
-  Content-Type: image/png
+/assets/img/**/*.webp
+  Content-Type: image/webp
 
-/*.svg
+/assets/img/*.svg
   Content-Type: image/svg+xml
 
-/*.jpg
+/assets/img/**/*.svg
+  Content-Type: image/svg+xml
+
+/assets/img/*.png
+  Content-Type: image/png
+
+/assets/img/**/*.png
+  Content-Type: image/png
+
+/assets/img/*.jpg
   Content-Type: image/jpeg
 
-/*.jpeg
+/assets/img/**/*.jpg
   Content-Type: image/jpeg
 
-/*.heic
-  Content-Type: image/heic
+/assets/img/*.jpeg
+  Content-Type: image/jpeg
 
-/*.ttf
+/assets/img/**/*.jpeg
+  Content-Type: image/jpeg
+
+/assets/fonts/*.ttf
   Content-Type: font/ttf
 
-/*.woff2
+/assets/fonts/**/*.ttf
+  Content-Type: font/ttf
+
+/assets/fonts/*.woff2
+  Content-Type: font/woff2
+
+/assets/fonts/**/*.woff2
   Content-Type: font/woff2
