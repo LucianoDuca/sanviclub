@@ -1,4 +1,4 @@
-const LOADER_DURATION = 3000;
+const LOADER_DURATION = 600;
 
 const _loaderBase = document.currentScript
   ? document.currentScript.src.replace(/js\/loader\.js[^/]*$/, '')
