@@ -26,7 +26,7 @@
 .club-hero {
   position: relative;
   min-height: 100vh;
-  margin-top: 175px;
+  margin-top: 47px;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
@@ -458,7 +458,7 @@
 
 .club-subnav {
   position: fixed;
-  top: 125px;
+  top: 0;
   left: 0;
   right: 0;
   z-index: 98;
@@ -471,6 +471,10 @@
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
 }
 
 .club-subnav-list {
@@ -480,6 +484,26 @@
   justify-content: center;
   margin: 0;
   padding: 0;
+}
+
+.club-subnav-btn {
+  display: inline-block;
+  padding: 7px 16px;
+  font-size: 0.62rem;
+  font-weight: 800;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: var(--cs-white);
+  background: var(--cs-red);
+  border-radius: 4px;
+  white-space: nowrap;
+  transition: background 0.22s ease, opacity 0.22s ease;
+  flex-shrink: 0;
+}
+
+.club-subnav-btn:hover {
+  opacity: 0.85;
 }
 
 .club-subnav-link {
@@ -785,11 +809,11 @@
 @media (max-width: 900px) {
   .club-hero {
     min-height: 90vh;
-    margin-top: 170px;
+    margin-top: 47px;
   }
 
   .club-subnav {
-    top: 120px;
+    top: 0;
   }
 
   .club-hero-content {
@@ -837,21 +861,28 @@
 
 @media (max-width: 768px) {
   .club-hero {
-    margin-top: 158px;
+    margin-top: 43px;
   }
 
   .club-subnav {
-    top: 108px;
+    top: 0;
   }
 
   .club-subnav-inner {
-    padding: 0 16px;
+    padding: 0 10px;
+    gap: 8px;
   }
 
   .club-subnav-link {
-    padding: 12px 14px;
-    font-size: 0.62rem;
-    letter-spacing: 1.5px;
+    padding: 12px 10px;
+    font-size: 0.60rem;
+    letter-spacing: 1.2px;
+  }
+
+  .club-subnav-btn {
+    padding: 6px 10px;
+    font-size: 0.58rem;
+    letter-spacing: 1.2px;
   }
 
   .club-hero-content {
@@ -953,12 +984,12 @@
 
 @media (max-width: 480px) {
   .club-hero {
-    margin-top: 152px;
+    margin-top: 43px;
     min-height: 80vh;
   }
 
   .club-subnav {
-    top: 102px;
+    top: 0;
   }
 
   .club-about-photo {
