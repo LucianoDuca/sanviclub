@@ -1,40 +1,44 @@
 .language-switcher {
-  position: fixed;
-  top: 18px;
-  left: 18px;
-  z-index: 9999;
+  position: relative;
   font-family: Arial, sans-serif;
+  flex-shrink: 0;
 }
 
 .language-toggle {
-  border: 1px solid rgba(11, 74, 120, 0.18);
-  background: rgba(255, 255, 255, 0.95);
-  color: #0b4a78;
-  padding: 9px 13px;
+  border: 1px solid rgba(255, 255, 255, 0.28);
+  background: rgba(255, 255, 255, 0.10);
+  color: rgba(255, 255, 255, 0.85);
+  padding: 6px 11px;
   border-radius: 999px;
-  font-size: 13px;
+  font-size: 0.65rem;
   font-weight: 800;
-  letter-spacing: 0.04em;
+  letter-spacing: 0.5px;
   cursor: pointer;
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.12);
-  backdrop-filter: blur(8px);
+  white-space: nowrap;
+  transition: background 0.2s ease, color 0.2s ease;
+}
+
+.language-toggle:hover {
+  background: rgba(255, 255, 255, 0.20);
+  color: #ffffff;
 }
 
 .language-menu {
   position: absolute;
   top: calc(100% + 8px);
-  left: 0;
-  min-width: 140px;
+  right: 0;
+  min-width: 130px;
   padding: 8px;
-  border-radius: 14px;
+  border-radius: 12px;
   background: #ffffff;
-  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.18);
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.22);
   display: none;
+  z-index: 200;
 }
 
 .language-menu.is-open {
   display: grid;
-  gap: 5px;
+  gap: 4px;
 }
 
 .language-menu button {
@@ -43,24 +47,13 @@
   color: #1b2b38;
   text-align: left;
   padding: 10px 12px;
-  border-radius: 10px;
-  font-size: 14px;
+  border-radius: 8px;
+  font-size: 13px;
   font-weight: 700;
   cursor: pointer;
+  width: 100%;
 }
 
 .language-menu button:hover {
   background: rgba(11, 74, 120, 0.08);
-}
-
-@media (max-width: 768px) {
-  .language-switcher {
-    top: 14px;
-    left: 12px;
-  }
-
-  .language-toggle {
-    padding: 8px 11px;
-    font-size: 12px;
-  }
 }

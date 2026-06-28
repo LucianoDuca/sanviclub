@@ -475,6 +475,7 @@
   align-items: center;
   justify-content: center;
   gap: 16px;
+  position: relative;
 }
 
 .club-subnav-list {
@@ -526,6 +527,16 @@
 }
 
 .club-subnav-bar {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  position: absolute;
+  right: 40px;
+  top: 0;
+  bottom: 0;
+}
+
+.club-subnav-brand {
   display: none;
 }
 
@@ -886,15 +897,20 @@
   }
 
   .club-subnav-bar {
-    display: flex;
-    align-items: center;
+    position: static;
+    right: auto;
+    top: auto;
+    bottom: auto;
     justify-content: space-between;
     padding: 0 16px;
     height: 43px;
     flex-shrink: 0;
+    gap: 8px;
   }
 
   .club-subnav-brand {
+    display: block;
+    flex: 1;
     color: rgba(255, 255, 255, 0.90);
     font-size: 0.70rem;
     font-weight: 900;
